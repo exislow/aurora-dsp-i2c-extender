@@ -1,0 +1,319 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Aurora DSP I2C Extender"
+Date "2021-05-15"
+Rev "1.0"
+Comp ""
+Comment1 "Design for JLCPCB 1-2 Layer Service"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR01
+U 1 1 609FCA46
+P 1350 4550
+F 0 "#PWR01" H 1350 4300 50  0001 C CNN
+F 1 "GND" H 1400 4350 50  0000 C CNN
+F 2 "" H 1350 4550 50  0001 C CNN
+F 3 "" H 1350 4550 50  0001 C CNN
+	1    1350 4550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 3700 1350 3700
+Wire Wire Line
+	1350 3700 1350 3800
+Wire Wire Line
+	1500 3800 1350 3800
+Connection ~ 1350 3800
+Wire Wire Line
+	1350 3800 1350 3900
+Wire Wire Line
+	1500 3900 1350 3900
+Connection ~ 1350 3900
+Wire Wire Line
+	1350 3900 1350 4000
+Wire Wire Line
+	1500 4000 1350 4000
+Connection ~ 1350 4000
+Wire Wire Line
+	1350 4000 1350 4100
+Wire Wire Line
+	1500 4100 1350 4100
+Connection ~ 1350 4100
+Wire Wire Line
+	1350 4100 1350 4200
+Wire Wire Line
+	1500 4200 1350 4200
+Connection ~ 1350 4200
+Wire Wire Line
+	1350 4200 1350 4300
+Wire Wire Line
+	1500 4300 1350 4300
+Connection ~ 1350 4300
+Wire Wire Line
+	1350 4300 1350 4400
+Wire Wire Line
+	1500 4400 1350 4400
+Connection ~ 1350 4400
+Wire Wire Line
+	1350 4400 1350 4550
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even J1
+U 1 1 609FAC5D
+P 1700 4000
+F 0 "J1" H 1750 4550 50  0000 C CNN
+F 1 "Conn_02x08_Odd_Even" H 1750 4450 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 1700 4000 50  0001 C CNN
+F 3 "~" H 1700 4000 50  0001 C CNN
+	1    1700 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR04
+U 1 1 60A11669
+P 2200 4550
+F 0 "#PWR04" H 2200 4400 50  0001 C CNN
+F 1 "+12V" H 2200 4750 50  0000 C CNN
+F 2 "" H 2200 4550 50  0001 C CNN
+F 3 "" H 2200 4550 50  0001 C CNN
+	1    2200 4550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2200 4550 2200 4400
+$Comp
+L Regulator_Linear:AZ1117-3.3 U1
+U 1 1 60A1B2CD
+P 2800 5350
+F 0 "U1" H 2800 5650 50  0000 C CNN
+F 1 "AZ1117-3.3" H 2800 5550 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2800 5600 50  0001 C CIN
+F 3 "https://www.diodes.com/assets/Datasheets/AZ1117.pdf" H 2800 5350 50  0001 C CNN
+	1    2800 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR06
+U 1 1 60A1921A
+P 3450 4700
+F 0 "#PWR06" H 3450 4550 50  0001 C CNN
+F 1 "+3V3" H 3450 4900 50  0000 C CNN
+F 2 "" H 3450 4700 50  0001 C CNN
+F 3 "" H 3450 4700 50  0001 C CNN
+	1    3450 4700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3450 4500 3450 4700
+Wire Wire Line
+	4100 4500 4100 4700
+Wire Wire Line
+	4100 4700 3450 4700
+Connection ~ 3450 4700
+$Comp
+L Device:C C2
+U 1 1 60A2990A
+P 3300 5500
+F 0 "C2" H 3150 5450 50  0000 R CNN
+F 1 "22uF" H 3150 5500 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3338 5350 50  0001 C CNN
+F 3 "~" H 3300 5500 50  0001 C CNN
+	1    3300 5500
+	-1   0    0    1   
+$EndComp
+Connection ~ 2800 5650
+Wire Wire Line
+	2800 5650 3300 5650
+$Comp
+L power:GND #PWR02
+U 1 1 60A2AB6B
+P 2050 5800
+F 0 "#PWR02" H 2050 5550 50  0001 C CNN
+F 1 "GND" H 2100 5600 50  0000 C CNN
+F 2 "" H 2050 5800 50  0001 C CNN
+F 3 "" H 2050 5800 50  0001 C CNN
+	1    2050 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 5800 2050 5650
+Wire Wire Line
+	3550 5350 3300 5350
+Connection ~ 3300 5350
+Wire Wire Line
+	3300 5350 3100 5350
+$Comp
+L power:+12V #PWR03
+U 1 1 60A2C772
+P 2150 5350
+F 0 "#PWR03" H 2150 5200 50  0001 C CNN
+F 1 "+12V" H 2200 5550 50  0000 C CNN
+F 2 "" H 2150 5350 50  0001 C CNN
+F 3 "" H 2150 5350 50  0001 C CNN
+	1    2150 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR07
+U 1 1 60A2DA60
+P 3550 5350
+F 0 "#PWR07" H 3550 5200 50  0001 C CNN
+F 1 "+3.3V" H 3600 5550 50  0000 C CNN
+F 2 "" H 3550 5350 50  0001 C CNN
+F 3 "" H 3550 5350 50  0001 C CNN
+	1    3550 5350
+	1    0    0    -1  
+$EndComp
+Text Label 2050 4300 0    50   ~ 0
+MDI
+Text Label 2050 4200 0    50   ~ 0
+MDO
+Text Label 2050 4100 0    50   ~ 0
+BCLK
+Text Label 2050 4000 0    50   ~ 0
+LRCK
+Text Label 2050 3900 0    50   ~ 0
+SDA
+Text Label 2050 3800 0    50   ~ 0
+SCL
+Text Label 2050 3700 0    50   ~ 0
+MCLK
+Wire Wire Line
+	3400 3700 3600 3700
+Wire Wire Line
+	3400 3800 3600 3800
+Wire Wire Line
+	3400 3900 3600 3900
+Wire Wire Line
+	3400 4000 3600 4000
+Wire Wire Line
+	3400 4100 3600 4100
+Wire Wire Line
+	3400 4200 3600 4200
+Wire Wire Line
+	3400 4300 3600 4300
+Wire Wire Line
+	3400 4400 3600 4400
+Wire Wire Line
+	4350 3700 4100 3700
+Wire Wire Line
+	4350 3800 4100 3800
+Wire Wire Line
+	4350 3900 4100 3900
+Wire Wire Line
+	4350 4000 4100 4000
+Wire Wire Line
+	4350 4100 4100 4100
+Wire Wire Line
+	4350 4200 4100 4200
+Wire Wire Line
+	4350 4300 4100 4300
+Wire Wire Line
+	4350 4400 4100 4400
+Text Label 3400 3700 0    50   ~ 0
+MCLK
+Text Label 4200 3700 0    50   ~ 0
+MCLK
+Text Label 3400 3800 0    50   ~ 0
+SCL
+Text Label 4200 3800 0    50   ~ 0
+SCL
+Text Label 3400 3900 0    50   ~ 0
+SDA
+Text Label 4200 3900 0    50   ~ 0
+SDA
+Text Label 3400 4000 0    50   ~ 0
+LRCK
+Text Label 4200 4000 0    50   ~ 0
+LRCK
+Text Label 3400 4100 0    50   ~ 0
+BCLK
+Text Label 4200 4100 0    50   ~ 0
+BCLK
+Text Label 3400 4200 0    50   ~ 0
+MDO
+Text Label 4200 4200 0    50   ~ 0
+MDO
+Text Label 4200 4300 0    50   ~ 0
+MDI
+Text Label 3400 4300 0    50   ~ 0
+MDI
+$Comp
+L Connector_Generic:Conn_02x09_Odd_Even J2
+U 1 1 60A42225
+P 3800 4100
+F 0 "J2" H 3850 4750 50  0000 C CNN
+F 1 "Conn_02x09_Odd_Even" H 3850 4650 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x09_P2.54mm_Vertical" H 3800 4100 50  0001 C CNN
+F 3 "~" H 3800 4100 50  0001 C CNN
+	1    3800 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 4500 3450 4500
+$Comp
+L power:GND #PWR08
+U 1 1 60A4DE6E
+P 4350 4400
+F 0 "#PWR08" H 4350 4150 50  0001 C CNN
+F 1 "GND" V 4400 4250 50  0000 R CNN
+F 2 "" H 4350 4400 50  0001 C CNN
+F 3 "" H 4350 4400 50  0001 C CNN
+	1    4350 4400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 60A4EAFD
+P 3400 4400
+F 0 "#PWR05" H 3400 4150 50  0001 C CNN
+F 1 "GND" V 3400 4250 50  0000 R CNN
+F 2 "" H 3400 4400 50  0001 C CNN
+F 3 "" H 3400 4400 50  0001 C CNN
+	1    3400 4400
+	0    1    1    0   
+$EndComp
+Connection ~ 2250 5350
+Wire Wire Line
+	2250 5350 2500 5350
+Wire Wire Line
+	2150 5350 2250 5350
+Connection ~ 2250 5650
+Wire Wire Line
+	2250 5650 2800 5650
+Wire Wire Line
+	2050 5650 2250 5650
+$Comp
+L Device:C C1
+U 1 1 60A26FA0
+P 2250 5500
+F 0 "C1" H 2100 5450 50  0000 R CNN
+F 1 "10uF" H 2100 5500 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2288 5350 50  0001 C CNN
+F 3 "~" H 2250 5500 50  0001 C CNN
+	1    2250 5500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2000 4400 2200 4400
+Wire Wire Line
+	2000 3700 2150 3700
+Wire Wire Line
+	2000 3800 2150 3800
+Wire Wire Line
+	2000 3900 2150 3900
+Wire Wire Line
+	2000 4000 2150 4000
+Wire Wire Line
+	2000 4100 2150 4100
+Wire Wire Line
+	2000 4200 2150 4200
+Wire Wire Line
+	2000 4300 2150 4300
+$EndSCHEMATC
